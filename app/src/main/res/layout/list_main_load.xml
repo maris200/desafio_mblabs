@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/cover_restaurant_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@color/colorGray"
+        app:riv_corner_radius="8dip"
+        app:riv_oval="false"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="10dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/name_home_text"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:background="@color/colorGray"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="12dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/description_home_text"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_load"
+        android:background="@color/colorGray"
+        android:textColor="@color/colorPrice"
+        android:textSize="@dimen/font_size"
+        app:layout_constraintTop_toBottomOf="@id/name_home_text"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="121dp" />
+
+    <TextView
+        android:id="@+id/price_home_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_load"
+        android:textSize="@dimen/font_size"
+        android:textColor="@color/colorPrice"
+        android:background="@color/colorGray"
+        app:layout_constraintTop_toBottomOf="@id/description_home_text"
+        tools:layout_editor_absoluteX="121dp"
+        tools:ignore="MissingConstraints"/>
+
+</android.support.constraint.ConstraintLayout>

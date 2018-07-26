@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.details.DetailsActivity">
+
+    <ImageView
+        android:id="@+id/cover_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:background="@color/colorPrimary"
+        tools:layout_editor_absoluteY="5dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/old_price_home_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrice"
+        android:textSize="@dimen/font_size"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <TextView
+        android:id="@+id/price_home_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="@dimen/font_size"
+        app:layout_constraintTop_toBottomOf="@id/old_price_home_text"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="171dp" />
+
+
+    <TextView
+        android:id="@+id/name_home_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size"
+        app:layout_constraintTop_toBottomOf="@id/price_home_text"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/description_home_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size"
+        app:layout_constraintTop_toBottomOf="@id/name_home_text"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+</android.support.constraint.ConstraintLayout>

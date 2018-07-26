@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "br.com.mblabs.desafio"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // KOTLIN
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    // SUPPORT LIBRARY
+    implementation "com.android.support.constraint:constraint-layout:$constraint_layout"
+    implementation "com.android.support:support-v4:$support_library_version"
+    implementation "com.android.support:design:$support_library_version"
+    implementation "com.android.support:appcompat-v7:$support_library_version"
+    implementation "com.android.support:cardview-v7:$support_library_version"
+
+    // VIEWMODEL AND LIVEDATA
+    implementation "android.arch.lifecycle:extensions:$arch_lifecycle_version"
+    implementation "android.arch.lifecycle:common-java8:$arch_lifecycle_version"
+
+    // RETROFIT
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // RXJAVA
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+
+    // DATABINDING
+    implementation "com.android.support:support-v4:$support_library_version"
+    kapt "com.android.databinding:compiler:$compiler"
+
+    // IMAGE
+    implementation "com.squareup.picasso:picasso:$picasso"
+    implementation "com.makeramen:roundedimageview:$roundedImage"
+
+    // LOADVIEW
+    implementation "com.wang.avi:library:$loadview"
+
+    // SKELETON LOADING
+    implementation "com.ethanhua:skeleton:$skeleton_load"
+    implementation "io.supercharge:shimmerlayout:$shimmerlayout"
+
+    // ROOM
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
+
+    // TESTS
+    testImplementation "junit:junit:$junit"
+    androidTestImplementation "com.android.support.test:runner:$runner"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$core"
+}

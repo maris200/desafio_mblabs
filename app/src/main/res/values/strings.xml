@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">desafio</string>
+    <string name="item_error_load">Erro ao carregar lista</string>
+</resources>
